@@ -1,39 +1,20 @@
-import { useState, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
+import ThemeToggler from "../components/shared/themeToggler";
+import useDarkMode from "../components/shared/useDarkMode";
 import "../styles/normalize.css";
 import "../styles/globals.js";
-import {
-	lightTheme,
-	darkTheme,
-	GlobalStyles,
-	ThemeButton,
-} from "../styles/globals";
+import { lightTheme, darkTheme, GlobalStyles } from "../styles/globals";
 
 function MyApp({ Component, pageProps }) {
-	const [theme, setTheme] = useState("dark");
-
-	const setMode = (mode) => {
-		window.localStorage.setItem("theme", mode);
-		setTheme(mode);
-	};
-
-	const toggleTheme = (e) => {
-		theme === "light" ? setMode("dark") : setMode("light");
-		document.activeElement.blur();
-	};
-
-	useEffect(() => {
-		const localTheme = window.localStorage.getItem("theme");
-		localTheme && setTheme(localTheme);
-	}, []);
+	const [theme, toggleTheme] = useDarkMode();
+	const themeMode = theme === "light" ? lightTheme : darkTheme;
 
 	return (
-		<ThemeProvider theme={theme == "light" ? lightTheme : darkTheme}>
-			<ThemeButton onClick={toggleTheme}>
-				{theme == "light" ? "Dark" : "Light"}
-			</ThemeButton>
+		<ThemeProvider theme={themeMode}>
 			<GlobalStyles />
-			<Component {...pageProps} />
+			<Component {...pageProps}>
+				<ThemeToggler theme={theme} toggleTheme={toggleTheme} />
+			</Component>
 		</ThemeProvider>
 	);
 }
