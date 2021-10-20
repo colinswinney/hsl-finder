@@ -1,11 +1,9 @@
 import { ThemeTogglerEl, Moon, Sun } from "./styles/themeToggler";
 
-function ThemeToggler({ theme, toggleTheme }) {
-	const isLight = theme === "light";
-
+function ThemeToggler({ isLight, onToggleClick }) {
 	return (
-		<ThemeTogglerEl lightTheme={isLight} onClick={toggleTheme}>
-			{isLight ? (
+		<ThemeTogglerEl onClick={onToggleClick}>
+			{!isLight ? (
 				<Moon
 					xmlns="http://www.w3.org/2000/svg"
 					enableBackground="new 0 0 24 24"

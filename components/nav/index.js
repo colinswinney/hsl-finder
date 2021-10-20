@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { NavEl, NavMenu, NavMenuItem, NavMenuLink, Swatch } from "./styles/nav";
 import Container from "../shared/container";
+import TextToCopy from "../shared/text-to-copy";
 
-function Nav({ children }) {
+function Nav({ children, colorObj }) {
 	const [scroll, setScroll] = useState(false);
 	useEffect(() => {
 		window.addEventListener("scroll", () => {
@@ -25,7 +26,13 @@ function Nav({ children }) {
 						<NavMenuLink href="#">HSL</NavMenuLink>
 					</NavMenuItem>
 					<NavMenuItem className="swatch-wrap">
-						hsl(0, 0%, 100%) <Swatch />
+						<TextToCopy
+							clipboardText={colorObj.color()}
+							btnTitle={`Copy: ${colorObj.color()}`}
+						>
+							{colorObj.color()}
+						</TextToCopy>
+						<Swatch style={{ backgroundColor: colorObj.color() }} />
 					</NavMenuItem>
 					<NavMenuItem className="toggle">{children}</NavMenuItem>
 					<NavMenuItem className="flex-break" />

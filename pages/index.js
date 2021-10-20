@@ -1,11 +1,76 @@
+import { useState, useEffect } from "react";
 import Head from "next/head";
-import Nav from "../components/nav";
-import Header from "../components/header";
-import Main from "../components/main";
-import Section from "../components/shared/section";
-import Footer from "../components/footer";
+import Layout from "../components/layout";
 
 export default function Home({ children }) {
+	const [colorObj, setColorObj] = useState(() => {
+		const savedHue = localStorage.getItem("hue");
+		const savedSaturation = localStorage.getItem("saturation");
+		const savedLightness = localStorage.getItem("lightness");
+
+		const hueValue = savedHue ? Number(JSON.parse(savedHue)) : 180;
+		const saturationValue = savedSaturation
+			? Number(JSON.parse(savedSaturation))
+			: 50;
+		const lightnessValue = savedLightness
+			? Number(JSON.parse(savedLightness))
+			: 50;
+
+		return {
+			hue: hueValue,
+			saturation: saturationValue,
+			lightness: lightnessValue,
+			color: function () {
+				return `hsl(${this.hue}, ${this.saturation}%, ${this.lightness}%)`;
+			},
+		};
+	});
+
+	useEffect(() => {
+		localStorage.setItem("hue", JSON.stringify(colorObj.hue));
+		localStorage.setItem("saturation", JSON.stringify(colorObj.saturation));
+		localStorage.setItem("lightness", JSON.stringify(colorObj.lightness));
+	}, [colorObj]);
+
+	function handleHueChange(e) {
+		const hueValue = e.target.value;
+		setColorObj((prevState) => {
+			return {
+				...prevState,
+				hue: hueValue,
+				color: function () {
+					return `hsl(${hueValue}, ${colorObj.saturation}%, ${colorObj.lightness}%)`;
+				},
+			};
+		});
+	}
+
+	function handleSaturationChange(e) {
+		const saturationValue = e.target.value;
+		setColorObj((prevState) => {
+			return {
+				...prevState,
+				saturation: saturationValue,
+				color: function () {
+					return `hsl(${colorObj.hue}, ${saturationValue}%, ${colorObj.lightness}%)`;
+				},
+			};
+		});
+	}
+
+	function handleLightnessChange(e) {
+		const lightnessValue = e.target.value;
+		setColorObj((prevState) => {
+			return {
+				...prevState,
+				lightness: lightnessValue,
+				color: function () {
+					return `hsl(${colorObj.hue}, ${colorObj.saturation}%, ${lightnessValue}%)`;
+				},
+			};
+		});
+	}
+
 	return (
 		<>
 			<Head>
@@ -14,32 +79,14 @@ export default function Home({ children }) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<Nav>{children}</Nav>
-
-			<Header />
-
-			<Main>
-				<Section id="Shades">
-					<Section.Title>Shades</Section.Title>
-					stuff
-				</Section>
-
-				<Section id="Tints">
-					<Section.Title>Tints</Section.Title>
-					stuff
-				</Section>
-
-				<Section id="Harmonies">
-					<Section.Title>Harmonies</Section.Title>
-					stuff
-				</Section>
-
-				<Section id="Previews">
-					<Section.Title>Preview</Section.Title>
-					stuff
-				</Section>
-			</Main>
-			<Footer />
+			<Layout
+				onHueChange={handleHueChange}
+				onSaturationChange={handleSaturationChange}
+				onLightnessChange={handleLightnessChange}
+				colorObj={colorObj}
+			>
+				{children}
+			</Layout>
 		</>
 	);
 }

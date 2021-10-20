@@ -50,7 +50,7 @@ export const NavMenuItem = styled.li`
 	}
 
 	&.logo {
-		font-size: 1.25rem;
+		font-size: 1.5rem;
 		flex-grow: 1;
 		flex-basis: 0;
 
@@ -84,12 +84,12 @@ export const NavMenuItem = styled.li`
 		}
 
 		&.toggle {
-			margin: 0 2rem 0 auto;
-			order: 3;
-		}
-		&.swatch-wrap {
 			margin: 0;
 			order: 4;
+		}
+		&.swatch-wrap {
+			margin: 0 2rem 0 auto;
+			order: 3;
 		}
 	}
 `;
@@ -101,7 +101,7 @@ export const Swatch = styled.div`
 	margin-left: 0.5rem;
 	height: 1.5rem;
 	width: 1.5rem;
-	background: red;
+	border: 0.0625rem solid hsl(0, 0%, 30%);
 
 	@media (min-width: ${vars.breakpoint}) {
 		height: 2rem;

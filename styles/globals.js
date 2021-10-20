@@ -3,23 +3,31 @@ import styled from "styled-components";
 
 export const vars = {
 	breakpoint: `768px`,
+	dark: `hsl(300, 5%, 10%)`,
+	light: `hsl(0,0%,99%)`,
 	transition: `0.3s ease`,
 };
 
 export const lightTheme = {
 	bodyBg: `hsl(0,0%,99%)`,
-	bodyColor: `hsl(300, 5%, 10%);`,
-	linkHover: `hsl(300, 5%,1%);`,
+	bodyColor: `hsl(300, 5%, 10%)`,
+	headingColor: `hsl(300, 5%, 5%)`,
+	linkHover: `hsl(300, 5%, 40%)`,
 	navScrollBg: `hsl(0, 0%, 100%)`,
 	navScrollBorder: `hsl(0, 0%, 80%)`,
+	sliderThumb: `hsl(300, 5%, 20%)`,
+	sliderTrack: `hsla(300, 5%, 10%, 0.5)`,
 };
 
 export const darkTheme = {
 	bodyBg: `hsl(300, 5%, 10%)`,
 	bodyColor: `hsl(0,0%,70%)`,
+	headingColor: `hsl(0,0%,99%)`,
 	linkHover: `hsl(0,0%,99%)`,
 	navScrollBg: `hsl(0, 0%, 7%)`,
 	navScrollBorder: `hsl(0, 0%, 50%)`,
+	sliderThumb: `hsla(0, 0%, 100%, 1)`,
+	sliderTrack: `hsla(0, 0%, 100%, 0.5)`,
 };
 
 export const GlobalStyles = createGlobalStyle`
@@ -44,18 +52,19 @@ export const GlobalStyles = createGlobalStyle`
 	}
 
 	p {
-		margin-bottom: 1rem;
+		margin: 1rem 0;
 	}
 
 	h1, h2, h3, h4, h5 {
-		margin: 3rem 0 1.38rem;
+		margin: 0;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 700;
-		line-height: 1.3;
+		line-height: 1.2;
+		color: ${({ theme }) => theme.headingColor}
 	}
 
 	h1 {
-		margin-top: 0;
+		margin-bottom: 1rem;
 		font-size: 2.488rem;
 	}
 
