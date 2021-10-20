@@ -1,4 +1,4 @@
-import { ThemeTogglerEl, Moon, Sun } from "./styles/themeToggler";
+import { ThemeTogglerEl, Moon, Sun } from "./styles/theme-toggler";
 
 function ThemeToggler({ isLight, onToggleClick }) {
 	return (

@@ -5,17 +5,20 @@ export const ThemeTogglerEl = styled.div`
 	cursor: pointer;
 
 	svg {
-		fill: ${({ theme }) => theme.bodyColor};
 		height: 2rem;
 		width: 2rem;
 		transition: ${vars.transition};
 
 		&:hover {
-			fill: ${({ theme }) => theme.linkHover};
+			opacity: 0.5;
 		}
 	}
 `;
 
-export const Moon = styled.svg``;
+export const Moon = styled.svg`
+	fill: hsl(240, 50%, 50%);
+`;
 
-export const Sun = styled.svg``;
+export const Sun = styled.svg`
+	fill: hsl(45, 100%, 50%);
+`;

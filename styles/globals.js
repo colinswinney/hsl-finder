@@ -10,9 +10,9 @@ export const vars = {
 
 export const lightTheme = {
 	bodyBg: `hsl(0,0%,99%)`,
-	bodyColor: `hsl(300, 5%, 10%)`,
+	bodyColor: `hsl(300, 5%, 20%)`,
 	headingColor: `hsl(300, 5%, 5%)`,
-	linkHover: `hsl(300, 5%, 40%)`,
+	linkHover: `hsl(300, 5%, 35%)`,
 	navScrollBg: `hsl(0, 0%, 100%)`,
 	navScrollBorder: `hsl(0, 0%, 80%)`,
 	sliderThumb: `hsl(300, 5%, 20%)`,
@@ -56,7 +56,7 @@ export const GlobalStyles = createGlobalStyle`
 	}
 
 	h1, h2, h3, h4, h5 {
-		margin: 0;
+		margin: 0 0 1.38rem 0;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 700;
 		line-height: 1.2;
@@ -64,7 +64,6 @@ export const GlobalStyles = createGlobalStyle`
 	}
 
 	h1 {
-		margin-bottom: 1rem;
 		font-size: 2.488rem;
 	}
 

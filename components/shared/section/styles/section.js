@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
 export const SectionEl = styled.section`
-	padding-top: 3rem;
+	padding-top: 6rem;
 	margin-top: -3rem;
-	min-height: 800px;
 `;
 
 export const Title = styled.h2``;
+
+export const ColorsContainer = styled.div`
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+`;

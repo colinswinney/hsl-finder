@@ -4,7 +4,6 @@ import Clipboard from "react-clipboard.js";
 
 export const ColorName = styled(Clipboard)`
 	text-align: center;
-	white-space: nowrap;
 	transition: ${vars.transition};
 
 	&:hover,

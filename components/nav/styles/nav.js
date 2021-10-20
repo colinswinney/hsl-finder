@@ -6,7 +6,7 @@ export const NavEl = styled.nav`
 	border-bottom: 0.0625rem solid ${({ theme }) => theme.bodyBg};
 	position: fixed;
 	inset: 0 0 auto 0;
-	transition: ${vars.transition};
+	transition: background ${vars.transition};
 	z-index: 9999;
 
 	&.scrolled {
@@ -50,12 +50,34 @@ export const NavMenuItem = styled.li`
 	}
 
 	&.logo {
-		font-size: 1.5rem;
+		font-size: 2rem;
 		flex-grow: 1;
 		flex-basis: 0;
+		background: -webkit-linear-gradient(
+			-45deg,
+			red,
+			orange,
+			yellow,
+			green,
+			blue,
+			indigo,
+			violet
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke: 1px ${({ theme }) => theme.bodyColor};
 
 		@media (min-width: ${vars.breakpoint}) {
 			flex-grow: initial;
+		}
+
+		&:hover {
+			opacity: 0.75;
+			transition: ${vars.transition};
+
+			a {
+				text-decoration: none;
+			}
 		}
 	}
 
@@ -101,7 +123,6 @@ export const Swatch = styled.div`
 	margin-left: 0.5rem;
 	height: 1.5rem;
 	width: 1.5rem;
-	border: 0.0625rem solid hsl(0, 0%, 30%);
 
 	@media (min-width: ${vars.breakpoint}) {
 		height: 2rem;

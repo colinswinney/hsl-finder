@@ -3,6 +3,10 @@ import Header from "../header";
 import Main from "../main";
 import Section from "../shared/section";
 import Footer from "../footer";
+import Shades from "../shades";
+import Tints from "../tints";
+import Harmonies from "../harmonies";
+import Previews from "../previews";
 
 function Layout({
 	children,
@@ -25,22 +29,28 @@ function Layout({
 			<Main>
 				<Section id="Shades">
 					<Section.Title>Shades</Section.Title>
-					stuff
+					<Section.ColorsContainer>
+						<Shades colorObj={colorObj} />
+					</Section.ColorsContainer>
 				</Section>
 
 				<Section id="Tints">
 					<Section.Title>Tints</Section.Title>
-					stuff
+					<Section.ColorsContainer>
+						<Tints colorObj={colorObj} />
+					</Section.ColorsContainer>
 				</Section>
 
 				<Section id="Harmonies">
 					<Section.Title>Harmonies</Section.Title>
-					stuff
+					<Section.ColorsContainer>
+						<Harmonies colorObj={colorObj} />
+					</Section.ColorsContainer>
 				</Section>
 
 				<Section id="Previews">
-					<Section.Title>Preview</Section.Title>
-					stuff
+					<Section.Title>Previews</Section.Title>
+					<Previews colorObj={colorObj} />
 				</Section>
 			</Main>
 			<Footer />

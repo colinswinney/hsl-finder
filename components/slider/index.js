@@ -13,11 +13,8 @@ function Slider({ name, max, value, onSliderChange }) {
 
 	return (
 		<SliderEl>
-			<SliderLabel className="slider-label" htmlFor={name}>
-				{createLabel(name, value)}
-			</SliderLabel>
+			<SliderLabel htmlFor={name}>{createLabel(name, value)}</SliderLabel>
 			<SliderInput
-				className="slider-input"
 				name={name}
 				type="range"
 				min="0"

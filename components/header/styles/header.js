@@ -1,8 +1,18 @@
 import styled from "styled-components";
+import { vars } from "../../../styles/globals";
+import { TextBlockEl } from "../../shared/text-block/styles/text-block";
 
 export const HeaderEl = styled.header`
-	margin-top: 6rem;
+	margin-top: 7rem;
 	text-align: center;
+
+	${TextBlockEl} {
+		margin-top: 1rem;
+	}
+
+	@media (min-width: ${vars.breakpoint}) {
+		margin-top: 6rem;
+	}
 `;
 
 export const Title = styled.h1``;
@@ -16,12 +26,4 @@ export const ColorWindow = styled.div`
 	height: 200px;
 	width: 100%;
 	border: 0.0625rem solid hsl(0, 0%, 30%);
-`;
-
-export const TextBlock = styled.div`
-	margin-top: 2rem;
-`;
-
-export const ColorP = styled.p`
-	margin: 0.5rem;
 `;

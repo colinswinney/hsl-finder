@@ -1,15 +1,9 @@
-import {
-	HeaderEl,
-	Title,
-	Description,
-	ColorWindow,
-	TextBlock,
-	ColorP,
-} from "./styles/header";
+import { HeaderEl, Title, Description, ColorWindow } from "./styles/header";
 import { hslToHex, hslToRgb } from "../../helpers/helpers";
 import Container from "../shared/container";
 import Slider from "../slider";
 import TextToCopy from "../shared/text-to-copy";
+import TextBlock from "../shared/text-block";
 
 function Header({
 	colorObj,
@@ -50,16 +44,16 @@ function Header({
 				/>
 
 				<TextBlock>
-					<ColorP>
+					<TextBlock.Text>
 						<TextToCopy
 							clipboardText={colorObj.color()}
 							btnTitle={`Copy ${colorObj.color()}`}
 						>
 							{colorObj.color()}
 						</TextToCopy>
-					</ColorP>
+					</TextBlock.Text>
 
-					<ColorP>
+					<TextBlock.Text>
 						<TextToCopy
 							clipboardText={hslToHex(
 								colorObj.hue,
@@ -78,9 +72,9 @@ function Header({
 								colorObj.lightness
 							)}
 						</TextToCopy>
-					</ColorP>
+					</TextBlock.Text>
 
-					<ColorP>
+					<TextBlock.Text>
 						<TextToCopy
 							clipboardText={hslToRgb(
 								colorObj.hue,
@@ -99,7 +93,7 @@ function Header({
 								colorObj.lightness
 							)}
 						</TextToCopy>
-					</ColorP>
+					</TextBlock.Text>
 				</TextBlock>
 			</Container>
 		</HeaderEl>
