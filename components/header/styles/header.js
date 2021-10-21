@@ -33,7 +33,9 @@ export const ColorWindow = styled.div`
 	border: 0.0625rem solid ${({ theme }) => theme.borderColor};
 `;
 
-export const SliderTextContainer = styled.div``;
+export const SliderTextContainer = styled.div`
+	text-align: center;
+`;
 
 export const SliderContainer = styled.div`
 	margin-bottom: 2rem;
