@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Head from "next/head";
 import Layout from "../components/layout";
 
 export default function Home({ children }) {
@@ -72,24 +71,13 @@ export default function Home({ children }) {
 	}
 
 	return (
-		<>
-			<Head>
-				<title>HSL Color Finder</title>
-				<meta
-					name="description"
-					content="Explore the wonderful world of HSL colors! Select a hue, saturation, and lightness to find shades, tints, or color harmonies. Click on any HSL, HEX, or RGB value to copy right to your clipboard!"
-				/>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-
-			<Layout
-				onHueChange={handleHueChange}
-				onSaturationChange={handleSaturationChange}
-				onLightnessChange={handleLightnessChange}
-				colorObj={colorObj}
-			>
-				{children}
-			</Layout>
-		</>
+		<Layout
+			onHueChange={handleHueChange}
+			onSaturationChange={handleSaturationChange}
+			onLightnessChange={handleLightnessChange}
+			colorObj={colorObj}
+		>
+			{children}
+		</Layout>
 	);
 }
