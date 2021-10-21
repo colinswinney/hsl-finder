@@ -17,7 +17,7 @@ export const PreviewWindowEl = styled.section`
 `;
 
 export const Title = styled.h2`
-	margin: 0 0 1rem;
+	margin: 0.5rem 0 1rem;
 	line-height: 1.2;
 	color: inherit;
 `;

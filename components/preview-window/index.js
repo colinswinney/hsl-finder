@@ -7,7 +7,7 @@ function PreviewWindow({ textColor, bgColor, userText }) {
 	};
 	return (
 		<PreviewWindowEl style={styles}>
-			<Title>{userText ? userText : "HSL is the best thing ever"}</Title>
+			<Title>{userText ? userText : "HSL is the best thing ever!"}</Title>
 			<Text>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et
 				ipsum vel lorem posuere interdum ultricies sed lectus. Aliquam

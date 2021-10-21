@@ -9,8 +9,8 @@ export const vars = {
 };
 
 export const lightTheme = {
-	bodyBg: `hsl(0,0%,99%)`,
-	bodyColor: `hsl(300, 5%, 30%)`,
+	bodyBg: `hsl(0,0%,98%)`,
+	bodyColor: `hsl(300, 5%, 15%)`,
 	borderColor: `hsl(0, 0%, 30%)`,
 	headingColor: `hsl(300, 5%, 01%)`,
 	linkHover: `hsl(300, 5%, 01%)`,
@@ -67,6 +67,14 @@ export const GlobalStyles = createGlobalStyle`
 
 	h1 {
 		font-size: 2.488rem;
+
+		@media (min-width: 600px) {
+			font-size: 2.99rem;
+		}
+
+		@media (min-width: ${vars.breakpoint}) {
+			font-size: 3.59rem;
+		}
 	}
 
 	h2 {

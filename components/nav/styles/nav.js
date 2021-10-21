@@ -3,10 +3,10 @@ import { vars } from "../../../styles/globals";
 
 export const NavEl = styled.nav`
 	background: ${({ theme }) => theme.bodyBg};
-	border-bottom: 0.0625rem solid ${({ theme }) => theme.bodyBg};
+	border-bottom: 0.0625rem solid transparent;
 	position: fixed;
 	inset: 0 0 auto 0;
-	transition: background ${vars.transition};
+	transition: ${vars.transition};
 	z-index: 9999;
 
 	&.scrolled {
@@ -62,7 +62,7 @@ export const NavMenuItem = styled.li`
 			color: ${({ theme }) => theme.linkHover};
 			text-shadow: 0.125rem 0.09375rem 0
 					${({ theme }) => theme.navScrollBg},
-				0.28125rem 0.25rem 0.5rem ${(props) => props.bg};
+				0.28125rem 0.25rem 0.25rem ${(props) => props.bg};
 		}
 
 		&:hover {

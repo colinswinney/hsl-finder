@@ -6,7 +6,7 @@ function Footer() {
 		<FooterEl>
 			<Container>
 				<Small>
-					Created by{" "}
+					&copy; Copyright {new Date().getFullYear()},{" "}
 					<Link href="https://colinswinney.com">Colin Swinney</Link>
 				</Small>
 			</Container>

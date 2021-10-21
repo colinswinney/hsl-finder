@@ -75,7 +75,10 @@ export default function Home({ children }) {
 		<>
 			<Head>
 				<title>HSL Color Finder</title>
-				<meta name="description" content="HSL Color Finder blah blah" />
+				<meta
+					name="description"
+					content="Explore the wonderful world of HSL colors! Select a hue, saturation, and lightness to find shades, tints, or color harmonies. Click on any HSL, HEX, or RGB value to copy right to your clipboard!"
+				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 

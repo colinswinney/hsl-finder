@@ -71,13 +71,13 @@ function Harmonies({ colorObj }) {
 			/>
 
 			<ColorCell
-				hue={harmonyHue(colorObj.hue, 160)}
+				hue={harmonyHue(colorObj.hue, 150)}
 				saturation={colorObj.saturation}
 				lightness={colorObj.lightness}
 			/>
 
 			<ColorCell
-				hue={harmonyHue(colorObj.hue, 200)}
+				hue={harmonyHue(colorObj.hue, 210)}
 				saturation={colorObj.saturation}
 				lightness={colorObj.lightness}
 			/>

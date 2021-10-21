@@ -17,7 +17,7 @@ export const ThemeTogglerEl = styled.div`
 `;
 
 export const Moon = styled.svg`
-	fill: hsl(240, 50%, 50%);
+	fill: hsl(240, 70%, 30%);
 `;
 
 export const Sun = styled.svg`
