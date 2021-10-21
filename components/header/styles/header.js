@@ -17,8 +17,9 @@ export const HeaderEl = styled.header`
 
 export const Title = styled.h1``;
 
-export const Subtitle = styled.h3`
+export const Subtitle = styled.h2`
 	font-weight: 400;
+	font-size: 1.728rem;
 `;
 
 export const Description = styled.p`
