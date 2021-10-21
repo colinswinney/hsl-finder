@@ -97,22 +97,6 @@ export default class MyDocument extends Document {
 						content="Explore the wonderful world of HSL colors! Select a hue, saturation, and lightness to find shades, tints, or color harmonies. Click on any HSL, HEX, or RGB value to copy right to your clipboard!"
 					/>
 					<meta property="twitter:image" content="/meta-image.jpg" />
-
-					<script
-						async
-						src="https://www.googletagmanager.com/gtag/js?id=G-C8FTL97V5L"
-					/>
-
-					<script
-						dangerouslySetInnerHTML={{
-							__html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-C8FTL97V5L', { page_path: window.location.pathname });
-            `,
-						}}
-					/>
 				</Head>
 				<body>
 					<Main />
