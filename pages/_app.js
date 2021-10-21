@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { ThemeProvider } from "styled-components";
 import useDarkMode from "use-dark-mode";
 import "../styles/normalize.css";
@@ -14,6 +15,21 @@ function MyApp({ Component, pageProps }) {
 	useEffect(() => {
 		setIsMounted(true);
 	}, []);
+
+	const router = useRouter();
+
+	const handleRouteChange = (url) => {
+		window.gtag("config", "G-C8FTL97V5L", {
+			page_path: url,
+		});
+	};
+
+	useEffect(() => {
+		router.events.on("routeChangeComplete", handleRouteChange);
+		return () => {
+			router.events.off("routeChangeComplete", handleRouteChange);
+		};
+	}, [router.events]);
 
 	return (
 		<ThemeProvider theme={theme}>

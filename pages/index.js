@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Head from "next/head";
 import Layout from "../components/layout";
 
 export default function Home({ children }) {
@@ -71,13 +72,18 @@ export default function Home({ children }) {
 	}
 
 	return (
-		<Layout
-			onHueChange={handleHueChange}
-			onSaturationChange={handleSaturationChange}
-			onLightnessChange={handleLightnessChange}
-			colorObj={colorObj}
-		>
-			{children}
-		</Layout>
+		<>
+			<Head>
+				<title>HSL Color Finder</title>
+			</Head>
+			<Layout
+				onHueChange={handleHueChange}
+				onSaturationChange={handleSaturationChange}
+				onLightnessChange={handleLightnessChange}
+				colorObj={colorObj}
+			>
+				{children}
+			</Layout>
+		</>
 	);
 }

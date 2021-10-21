@@ -44,7 +44,7 @@ export default class MyDocument extends Document {
 						href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
 						rel="stylesheet"
 					/>
-					<title>HSL Color Finder</title>
+
 					<meta
 						name="description"
 						content="Explore the wonderful world of HSL colors! Select a hue, saturation, and lightness to find shades, tints, or color harmonies. Click on any HSL, HEX, or RGB value to copy right to your clipboard!"
@@ -68,7 +68,6 @@ export default class MyDocument extends Document {
 					/>
 					<link rel="manifest" href="/site.webmanifest" />
 
-					<title>HSL Color Finder</title>
 					<meta name="title" content="HSL Color Finder" />
 					<meta
 						name="description"
@@ -98,6 +97,22 @@ export default class MyDocument extends Document {
 						content="Explore the wonderful world of HSL colors! Select a hue, saturation, and lightness to find shades, tints, or color harmonies. Click on any HSL, HEX, or RGB value to copy right to your clipboard!"
 					/>
 					<meta property="twitter:image" content="/meta-image.jpg" />
+
+					<script
+						async
+						src="https://www.googletagmanager.com/gtag/js?id=G-C8FTL97V5L"
+					/>
+
+					<script
+						dangerouslySetInnerHTML={{
+							__html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-C8FTL97V5L', { page_path: window.location.pathname });
+            `,
+						}}
+					/>
 				</Head>
 				<body>
 					<Main />
