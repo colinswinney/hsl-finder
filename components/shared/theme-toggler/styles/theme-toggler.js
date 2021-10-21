@@ -8,9 +8,10 @@ export const ThemeTogglerEl = styled.div`
 		height: 2rem;
 		width: 2rem;
 		transition: ${vars.transition};
+		opacity: 1;
 
 		&:hover {
-			opacity: 0.5;
+			opacity: 0.75;
 		}
 	}
 `;

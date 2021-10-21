@@ -25,5 +25,5 @@ export const ColorWindow = styled.div`
 	margin: auto auto 1rem;
 	height: 200px;
 	width: 100%;
-	border: 0.0625rem solid hsl(0, 0%, 30%);
+	border: 0.0625rem solid ${({ theme }) => theme.borderColor};
 `;

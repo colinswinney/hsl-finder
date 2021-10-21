@@ -47,6 +47,7 @@ export const SliderInput = styled.input`
 		height: 1.5em;
 		margin-top: -0.0625rem;
 		background-color: ${({ theme }) => theme.sliderThumb};
+		box-shadow: none;
 		border-radius: 1em;
 		cursor: pointer;
 	}
@@ -55,6 +56,7 @@ export const SliderInput = styled.input`
 		height: 1.5em;
 		margin-top: -0.0625rem;
 		background-color: ${({ theme }) => theme.sliderThumb};
+		box-shadow: none;
 		border-radius: 1em;
 		cursor: pointer;
 	}
@@ -63,6 +65,7 @@ export const SliderInput = styled.input`
 		height: 1.5em;
 		margin-top: -0.0625rem;
 		background-color: ${({ theme }) => theme.sliderThumb};
+		box-shadow: none;
 		border-radius: 1em;
 		cursor: pointer;
 	}

@@ -13,5 +13,6 @@ export const ColorName = styled(Clipboard)`
 
 	&:hover {
 		cursor: pointer;
+		text-decoration: underline;
 	}
 `;

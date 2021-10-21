@@ -15,7 +15,7 @@ function Header({
 	return (
 		<HeaderEl {...restProps}>
 			<Container>
-				<Title>HSL Color Picker</Title>
+				<Title>HSL Color Finder</Title>
 				<Description>
 					Click on any HSL, HEX, or RGB value to copy to your
 					clipboard!

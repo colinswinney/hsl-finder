@@ -5,7 +5,11 @@ export const PreviewWindowEl = styled.section`
 	padding: 1rem;
 	margin-bottom: 3rem;
 	text-align: left;
-	border: 1px solid hsl(0, 0%, 30%);
+	border: 1px solid ${({ theme }) => theme.borderColor};
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
 
 	@media (min-width: ${vars.breakpoint}) {
 		margin-bottom: 0;

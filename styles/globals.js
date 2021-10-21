@@ -10,9 +10,10 @@ export const vars = {
 
 export const lightTheme = {
 	bodyBg: `hsl(0,0%,99%)`,
-	bodyColor: `hsl(300, 5%, 20%)`,
-	headingColor: `hsl(300, 5%, 5%)`,
-	linkHover: `hsl(300, 5%, 35%)`,
+	bodyColor: `hsl(300, 5%, 30%)`,
+	borderColor: `hsl(0, 0%, 30%)`,
+	headingColor: `hsl(300, 5%, 01%)`,
+	linkHover: `hsl(300, 5%, 01%)`,
 	navScrollBg: `hsl(0, 0%, 100%)`,
 	navScrollBorder: `hsl(0, 0%, 80%)`,
 	sliderThumb: `hsl(300, 5%, 20%)`,
@@ -22,6 +23,7 @@ export const lightTheme = {
 export const darkTheme = {
 	bodyBg: `hsl(300, 5%, 10%)`,
 	bodyColor: `hsl(0,0%,70%)`,
+	borderColor: `hsl(0, 0%, 30%)`,
 	headingColor: `hsl(0,0%,99%)`,
 	linkHover: `hsl(0,0%,99%)`,
 	navScrollBg: `hsl(0, 0%, 7%)`,

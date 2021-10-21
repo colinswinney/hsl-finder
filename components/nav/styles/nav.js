@@ -53,22 +53,16 @@ export const NavMenuItem = styled.li`
 		font-size: 2rem;
 		flex-grow: 1;
 		flex-basis: 0;
-		background: -webkit-linear-gradient(
-			-45deg,
-			red,
-			orange,
-			yellow,
-			green,
-			blue,
-			indigo,
-			violet
-		);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		-webkit-text-stroke: 1px ${({ theme }) => theme.bodyColor};
 
 		@media (min-width: ${vars.breakpoint}) {
 			flex-grow: initial;
+		}
+
+		a {
+			color: ${({ theme }) => theme.linkHover};
+			text-shadow: 0.125rem 0.09375rem 0
+					${({ theme }) => theme.navScrollBg},
+				0.28125rem 0.25rem 0.5rem ${(props) => props.bg};
 		}
 
 		&:hover {
@@ -123,6 +117,7 @@ export const Swatch = styled.div`
 	margin-left: 0.5rem;
 	height: 1.5rem;
 	width: 1.5rem;
+	border: 0.0625rem solid ${({ theme }) => theme.borderColor};
 
 	@media (min-width: ${vars.breakpoint}) {
 		height: 2rem;

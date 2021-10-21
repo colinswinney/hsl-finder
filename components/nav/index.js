@@ -22,7 +22,11 @@ function Nav({ children, colorObj }) {
 		<NavEl className={scroll ? "scrolled" : ""}>
 			<Container>
 				<NavMenu>
-					<NavMenuItem className="logo" onClick={scrollToTop}>
+					<NavMenuItem
+						className="logo"
+						onClick={scrollToTop}
+						bg={colorObj.color()}
+					>
 						<NavMenuLink href="#">HSL</NavMenuLink>
 					</NavMenuItem>
 					<NavMenuItem className="swatch-wrap">
