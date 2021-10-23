@@ -25,6 +25,25 @@ function Harmonies({ colorObj }) {
 				lightness={colorObj.lightness}
 			/>
 
+			<Heading>Split-Complimentary</Heading>
+			<ColorCell
+				hue={colorObj.hue}
+				saturation={colorObj.saturation}
+				lightness={colorObj.lightness}
+			/>
+
+			<ColorCell
+				hue={harmonyHue(colorObj.hue, 150)}
+				saturation={colorObj.saturation}
+				lightness={colorObj.lightness}
+			/>
+
+			<ColorCell
+				hue={harmonyHue(colorObj.hue, 210)}
+				saturation={colorObj.saturation}
+				lightness={colorObj.lightness}
+			/>
+
 			<Heading>Analogous</Heading>
 			<ColorCell
 				hue={colorObj.hue}
@@ -59,25 +78,6 @@ function Harmonies({ colorObj }) {
 
 			<ColorCell
 				hue={harmonyHue(colorObj.hue, 240)}
-				saturation={colorObj.saturation}
-				lightness={colorObj.lightness}
-			/>
-
-			<Heading>Split-Complimentary</Heading>
-			<ColorCell
-				hue={colorObj.hue}
-				saturation={colorObj.saturation}
-				lightness={colorObj.lightness}
-			/>
-
-			<ColorCell
-				hue={harmonyHue(colorObj.hue, 150)}
-				saturation={colorObj.saturation}
-				lightness={colorObj.lightness}
-			/>
-
-			<ColorCell
-				hue={harmonyHue(colorObj.hue, 210)}
 				saturation={colorObj.saturation}
 				lightness={colorObj.lightness}
 			/>
