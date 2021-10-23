@@ -25,9 +25,7 @@ function Header({
 		<HeaderEl {...restProps}>
 			<Container>
 				{/* <BigText>HSL</BigText> */}
-				<Title>
-					<span>HSL</span> Color Finder
-				</Title>
+				<Title bg={colorObj.color()}>HSL Color Finder</Title>
 				<Subtitle>Explore the wonderful world of HSL colors!</Subtitle>
 				<Description>
 					Select a hue, saturation, and lightness to find shades,

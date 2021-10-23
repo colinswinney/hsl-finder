@@ -15,7 +15,10 @@ export const HeaderEl = styled.header`
 	}
 `;
 
-export const Title = styled.h1``;
+export const Title = styled.h1`
+	text-shadow: 0.125rem 0.09375rem 0 ${({ theme }) => theme.bodyBg},
+		0.28125rem 0.25rem 0.25rem ${(props) => props.bg};
+`;
 
 export const Subtitle = styled.h2`
 	font-weight: 400;
