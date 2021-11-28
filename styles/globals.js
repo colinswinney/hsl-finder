@@ -2,7 +2,9 @@ import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 
 export const vars = {
-	breakpoint: `768px`,
+	breakpointSm: `576px`,
+	breakpointMd: `768px`,
+	breakpointLg: `992px`,
 	dark: `hsl(300, 5%, 10%)`,
 	light: `hsl(0,0%,99%)`,
 	transition: `0.3s ease`,
@@ -72,7 +74,7 @@ export const GlobalStyles = createGlobalStyle`
 			font-size: 2.99rem;
 		}
 
-		@media (min-width: ${vars.breakpoint}) {
+		@media (min-width: ${vars.breakpointMd}) {
 			font-size: 3.59rem;
 		}
 	}

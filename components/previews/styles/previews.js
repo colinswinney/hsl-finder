@@ -11,12 +11,12 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-	padding: 0.5rem 0;
+	padding: 0.5rem;
 	width: 100%;
-	max-width: 400px;
+	max-width: 460px;
 	display: block;
 	color: ${({ theme }) => theme.headingColor};
-	font-size: 20px;
+	font-size: 1.25rem;
 	font-weight: 700;
 	background: transparent;
 	border: none;
@@ -29,10 +29,28 @@ export const Input = styled.input`
 	}
 `;
 
+export const Textarea = styled.textarea`
+	padding: 0.5rem;
+	width: 100%;
+	height: 100px;
+	max-width: 460px;
+	display: block;
+	color: ${({ theme }) => theme.headingColor};
+	font-size: 1rem;
+	background: transparent;
+	border: 2px solid hsl(0, 0%, 70%);
+	border-radius: 0;
+	outline: none;
+
+	&:focus {
+		background: transparent;
+	}
+`;
+
 export const WindowsWrapper = styled.div`
 	margin-top: 3rem;
 
-	@media (min-width: ${vars.breakpoint}) {
+	@media (min-width: ${vars.breakpointMd}) {
 		display: grid;
 		grid-template-columns: auto auto;
 		gap: 3rem;

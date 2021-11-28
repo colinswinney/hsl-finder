@@ -11,7 +11,7 @@ export const PreviewWindowEl = styled.section`
 		margin-bottom: 0;
 	}
 
-	@media (min-width: ${vars.breakpoint}) {
+	@media (min-width: ${vars.breakpointMd}) {
 		margin-bottom: 0;
 	}
 `;
@@ -26,4 +26,19 @@ export const Text = styled.p`
 	margin: 0 0 0.5rem;
 	color: inherit;
 	font-weight: 400;
+`;
+
+export const Citation = styled.p`
+	text-align: right;
+	font-size: 1.125rem;
+	font-style: italic;
+	font-weight: 900;
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: inherit;
+		}
+	}
 `;

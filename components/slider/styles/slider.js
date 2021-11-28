@@ -45,19 +45,18 @@ export const SliderInput = styled.input`
 		-webkit-appearance: none;
 		width: 1.5em;
 		height: 1.5em;
-		margin-top: -0.0625rem;
+		margin-top: -0.125rem;
 		background-color: ${({ theme }) => theme.sliderThumb};
 		box-shadow: none;
-		border-radius: 1em;
+		border-radius: 50%;
 		cursor: pointer;
 	}
 	&::-moz-range-thumb {
 		width: 1.5em;
 		height: 1.5em;
-		margin-top: -0.0625rem;
 		background-color: ${({ theme }) => theme.sliderThumb};
 		box-shadow: none;
-		border-radius: 1em;
+		border-radius: 50%;
 		cursor: pointer;
 	}
 	&::-ms-thumb {
@@ -66,7 +65,7 @@ export const SliderInput = styled.input`
 		margin-top: -0.0625rem;
 		background-color: ${({ theme }) => theme.sliderThumb};
 		box-shadow: none;
-		border-radius: 1em;
+		border-radius: 50%;
 		cursor: pointer;
 	}
 	&:active::-webkit-slider-thumb {
@@ -82,15 +81,13 @@ export const SliderInput = styled.input`
 		width: 100%;
 		cursor: pointer;
 		height: 0.75em;
-		border-bottom: 2px solid ${({ theme }) => theme.sliderTrack};
+		border-bottom: 0.25em solid ${({ theme }) => theme.sliderTrack};
 		background-color: transparent;
 	}
 	&::-moz-range-track {
 		width: 100%;
 		cursor: pointer;
-		height: 0.75em;
-		border-bottom: 2px solid ${({ theme }) => theme.sliderTrack};
-		background-color: transparent;
+		background-color: ${({ theme }) => theme.sliderTrack};
 	}
 	&::-ms-track {
 		background: transparent;

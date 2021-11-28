@@ -10,7 +10,7 @@ export const HeaderEl = styled.header`
 		text-align: center;
 	}
 
-	@media (min-width: ${vars.breakpoint}) {
+	@media (min-width: ${vars.breakpointMd}) {
 		margin-top: 10rem;
 	}
 `;

@@ -38,7 +38,7 @@ export const NavMenuItem = styled.li`
 		flex-basis: 100%;
 		height: 0;
 
-		@media (min-width: ${vars.breakpoint}) {
+		@media (min-width: ${vars.breakpointMd}) {
 			display: none;
 		}
 	}
@@ -90,7 +90,7 @@ export const NavMenuItem = styled.li`
 		}
 	}
 
-	@media (min-width: ${vars.breakpoint}) {
+	@media (min-width: ${vars.breakpointMd}) {
 		margin-right: 2rem;
 		order: 2;
 
@@ -119,7 +119,7 @@ export const Swatch = styled.div`
 	width: 1.5rem;
 	border: 0.0625rem solid ${({ theme }) => theme.borderColor};
 
-	@media (min-width: ${vars.breakpoint}) {
+	@media (min-width: ${vars.breakpointMd}) {
 		height: 2rem;
 		width: 2rem;
 	}

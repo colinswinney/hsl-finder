@@ -1,21 +1,33 @@
 import { useState } from "react";
-import { Description, Label, Input, WindowsWrapper } from "./styles/previews";
+import {
+	Description,
+	Label,
+	Input,
+	Textarea,
+	WindowsWrapper,
+} from "./styles/previews";
 import PreviewWindow from "../preview-window";
 
 function Previews({ colorObj }) {
-	const [userText, setUserText] = useState("");
+	const [userHeading, setUserHeading] = useState("");
+	const [userBody, setUserBody] = useState("");
 
-	function handleUserTextChange(e) {
-		setUserText(e.target.value);
+	function handleUserHeadingChange(e) {
+		setUserHeading(e.target.value);
 	}
 
-	const light = "hsl(0, 0%, 99%)";
-	const dark = "hsl(0, 0%, 7%)";
+	function handleUserBodyChange(e) {
+		setUserBody(e.target.value);
+	}
+
+	const light = "hsl(0, 0%, 100%)";
+	const dark = "hsl(0, 0%, 0%)";
 
 	return (
 		<>
 			<Description>
-				View your selection against light or dark text and backgrounds.
+				View your selection against white or black text and backgrounds.
+				Add your own text below!
 			</Description>
 			<Label htmlFor="heading" className="text-label">
 				Heading:
@@ -24,30 +36,46 @@ function Previews({ colorObj }) {
 				className="text-input"
 				name="heading"
 				type="text"
-				value={userText}
+				value={userHeading}
 				placeholder="Type something"
-				onChange={handleUserTextChange}
+				onChange={handleUserHeadingChange}
 			/>
+
+			<Label htmlFor="body" className="text-label">
+				Body Text:
+			</Label>
+			<Textarea
+				className="text-input"
+				name="body"
+				value={userBody}
+				placeholder="Type something"
+				onChange={handleUserBodyChange}
+			/>
+
 			<WindowsWrapper>
 				<PreviewWindow
 					bgColor={colorObj.color()}
 					textColor={light}
-					userText={userText}
+					userHeading={userHeading}
+					userBody={userBody}
 				/>
 				<PreviewWindow
 					bgColor={light}
 					textColor={colorObj.color()}
-					userText={userText}
+					userHeading={userHeading}
+					userBody={userBody}
 				/>
 				<PreviewWindow
 					bgColor={colorObj.color()}
 					textColor={dark}
-					userText={userText}
+					userHeading={userHeading}
+					userBody={userBody}
 				/>
 				<PreviewWindow
 					bgColor={dark}
 					textColor={colorObj.color()}
-					userText={userText}
+					userHeading={userHeading}
+					userBody={userBody}
 				/>
 			</WindowsWrapper>
 		</>
