@@ -47,7 +47,7 @@ export default class MyDocument extends Document {
 
 					<meta
 						name="description"
-						content="Explore the wonderful world of HSL colors! Select a hue, saturation, and lightness to find shades, tints, or color harmonies. Click on any HSL, HEX, or RGB value to copy right to your clipboard!"
+						content="Explore the wonderful world of HSL colors! Pick a hue, saturation, and lightness to find shades, tints, or color harmonies. Click on any HSL, HEX, or RGB value to copy right to your clipboard!"
 					/>
 					<link
 						rel="apple-touch-icon"
@@ -71,7 +71,7 @@ export default class MyDocument extends Document {
 					<meta name="title" content="HSL Color Finder" />
 					<meta
 						name="description"
-						content="Explore the wonderful world of HSL colors! Select a hue, saturation, and lightness to find shades, tints, or color harmonies. Click on any HSL, HEX, or RGB value to copy right to your clipboard!"
+						content="Explore the wonderful world of HSL colors! Pick a hue, saturation, and lightness to find shades, tints, or color harmonies. Click on any HSL, HEX, or RGB value to copy right to your clipboard!"
 					/>
 
 					<meta property="og:type" content="website" />
@@ -79,7 +79,7 @@ export default class MyDocument extends Document {
 					<meta property="og:title" content="HSL Color Finder" />
 					<meta
 						property="og:description"
-						content="Explore the wonderful world of HSL colors! Select a hue, saturation, and lightness to find shades, tints, or color harmonies. Click on any HSL, HEX, or RGB value to copy right to your clipboard!"
+						content="Explore the wonderful world of HSL colors! Pick a hue, saturation, and lightness to find shades, tints, or color harmonies. Click on any HSL, HEX, or RGB value to copy right to your clipboard!"
 					/>
 					<meta property="og:image" content="/meta-image.jpg" />
 
@@ -94,7 +94,7 @@ export default class MyDocument extends Document {
 					<meta property="twitter:title" content="HSL Color Finder" />
 					<meta
 						property="twitter:description"
-						content="Explore the wonderful world of HSL colors! Select a hue, saturation, and lightness to find shades, tints, or color harmonies. Click on any HSL, HEX, or RGB value to copy right to your clipboard!"
+						content="Explore the wonderful world of HSL colors! Pick a hue, saturation, and lightness to find shades, tints, or color harmonies. Click on any HSL, HEX, or RGB value to copy right to your clipboard!"
 					/>
 					<meta property="twitter:image" content="/meta-image.jpg" />
 				</Head>

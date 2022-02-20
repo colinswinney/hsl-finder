@@ -28,9 +28,9 @@ function Header({
 				<Title bg={colorObj.color()}>HSL Color Finder</Title>
 				<Subtitle>Explore the wonderful world of HSL colors!</Subtitle>
 				<Description>
-					Select a hue, saturation, and lightness to find shades,
-					tints, or color harmonies. Click any HSL, HEX, or RGB value
-					to copy to your clipboard!
+					Pick a hue, saturation, and lightness to find shades, tints,
+					or color harmonies. Click any HSL, HEX, or RGB value to copy
+					to your clipboard!
 				</Description>
 				<ColorWindow style={{ backgroundColor: colorObj.color() }} />
 
