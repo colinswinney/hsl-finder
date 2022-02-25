@@ -74,7 +74,7 @@ export default function Home({ children }) {
 	return (
 		<>
 			<Head>
-				<title>HSL Color Finder</title>
+				<title>HSL Color Finder | Pick Your Perfect Color</title>
 			</Head>
 			<Layout
 				onHueChange={handleHueChange}
