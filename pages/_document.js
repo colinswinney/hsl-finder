@@ -69,7 +69,10 @@ export default class MyDocument extends Document {
 					/>
 					<link rel="manifest" href="/site.webmanifest" />
 
-					<meta name="title" content="HSL Color Finder" />
+					<meta
+						name="title"
+						content="HSL Color Finder | Pick Your Perfect Color"
+					/>
 					<meta
 						name="description"
 						content="Explore the wonderful world of HSL colors! Pick a hue, saturation, and lightness to find shades, tints, or color harmonies. Click on any HSL, HEX, or RGB value to copy right to your clipboard!"
@@ -77,7 +80,10 @@ export default class MyDocument extends Document {
 
 					<meta property="og:type" content="website" />
 					<meta property="og:url" content="https://hslfinder.com/" />
-					<meta property="og:title" content="HSL Color Finder" />
+					<meta
+						property="og:title"
+						content="HSL Color Finder | Pick Your Perfect Color"
+					/>
 					<meta
 						property="og:description"
 						content="Explore the wonderful world of HSL colors! Pick a hue, saturation, and lightness to find shades, tints, or color harmonies. Click on any HSL, HEX, or RGB value to copy right to your clipboard!"
@@ -92,7 +98,10 @@ export default class MyDocument extends Document {
 						property="twitter:url"
 						content="https://hslfinder.com/"
 					/>
-					<meta property="twitter:title" content="HSL Color Finder" />
+					<meta
+						property="twitter:title"
+						content="HSL Color Finder | Pick Your Perfect Color"
+					/>
 					<meta
 						property="twitter:description"
 						content="Explore the wonderful world of HSL colors! Pick a hue, saturation, and lightness to find shades, tints, or color harmonies. Click on any HSL, HEX, or RGB value to copy right to your clipboard!"
