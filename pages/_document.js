@@ -31,7 +31,6 @@ export default class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
-					<title>HSL Color Finder | Pick Your Perfect Color</title>
 					<link
 						rel="preconnect"
 						href="https://fonts.googleapis.com"

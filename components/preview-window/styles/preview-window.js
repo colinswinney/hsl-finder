@@ -6,14 +6,6 @@ export const PreviewWindowEl = styled.section`
 	margin-bottom: 3rem;
 	text-align: left;
 	border: 1px solid ${({ theme }) => theme.borderColor};
-
-	&:last-of-type {
-		margin-bottom: 0;
-	}
-
-	@media (min-width: ${vars.breakpointMd}) {
-		margin-bottom: 0;
-	}
 `;
 
 export const Title = styled.h2`

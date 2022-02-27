@@ -1,7 +1,12 @@
 import styled from "styled-components";
 import { vars } from "../../../styles/globals";
 
-export const Description = styled.p``;
+export const Description = styled.p`
+	max-width: 85ch;
+	a {
+		text-decoration: underline;
+	}
+`;
 
 export const Label = styled.label`
 	margin-top: 1.5rem;
@@ -11,7 +16,7 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-	padding: 0.5rem;
+	padding: 0.5rem 0.5rem 0.625rem;
 	width: 100%;
 	max-width: 460px;
 	display: block;
@@ -20,7 +25,7 @@ export const Input = styled.input`
 	font-weight: 700;
 	background: transparent;
 	border: none;
-	border-bottom: 2px solid hsl(0, 0%, 70%);
+	border: 2px solid hsl(0, 0%, 70%);
 	border-radius: 0;
 	outline: none;
 
@@ -54,5 +59,18 @@ export const WindowsWrapper = styled.div`
 		display: grid;
 		grid-template-columns: auto auto;
 		gap: 3rem;
+	}
+`;
+
+export const ScoreCard = styled.div`
+	margin: -2rem 0 5rem;
+	grid-column: 1 / -1;
+
+	span {
+		font-size: 175%;
+	}
+
+	@media (min-width: ${vars.breakpointMd}) {
+		margin: -5rem 0 0;
 	}
 `;
