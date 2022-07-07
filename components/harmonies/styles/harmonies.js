@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { vars } from "../../../styles/globals";
 
-export const Heading = styled.h4`
+export const Heading = styled.h3`
 	margin: 1rem 0 1rem;
 	grid-column: span 2;
 
