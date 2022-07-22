@@ -21,7 +21,7 @@ function PreviewWindow({ textColor, bgColor, userHeading, userBody }) {
 			) : (
 				<>
 					<Text>
-						"HSL (for hue, saturation, lightness) and HSV (for hue,
+						HSL (for hue, saturation, lightness) and HSV (for hue,
 						saturation, value; also known as HSB, for hue,
 						saturation, brightness) are alternative representations
 						of the RGB color model, designed in the 1970s by
@@ -30,7 +30,7 @@ function PreviewWindow({ textColor, bgColor, userHeading, userBody }) {
 						In these models, colors of each hue are arranged in a
 						radial slice, around a central axis of neutral colors
 						which ranges from black at the bottom to white at the
-						top."
+						top.
 					</Text>
 					<Citation>
 						-{" "}
