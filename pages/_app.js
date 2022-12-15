@@ -6,6 +6,7 @@ import "../styles/globals.js";
 import { lightTheme, darkTheme, GlobalStyles } from "../styles/globals";
 import ThemeToggler from "../components/shared/theme-toggler";
 
+// testing
 function MyApp({ Component, pageProps }) {
 	const [isMounted, setIsMounted] = useState(false);
 	const darkmode = useDarkMode(true);
